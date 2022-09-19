@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name bluepill)(type KiCad)(uri /Users/jonathanlow/Downloads/Kicad-STM32-master/bluepill.pretty)(options "")(descr ""))
+  (lib (name custom)(type KiCad)(uri ${KIPRJMOD}/custom-footprints/custom.pretty)(options "")(descr ""))
 )
