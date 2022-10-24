@@ -469,15 +469,15 @@ F 3 "" H 14975 1575 50  0001 C CNN
 	1    14975 1575
 	1    0    0    -1  
 $EndComp
-Text GLabel 7625 2775 0    50   Input ~ 0
+Text GLabel 7625 2375 0    50   Input ~ 0
 EMIT_1
-Text GLabel 7625 2675 0    50   Input ~ 0
+Text GLabel 9725 2075 2    50   Input ~ 0
 EMIT_2
 Text GLabel 7775 2575 0    50   Input ~ 0
 USART1_RX
 Text GLabel 7775 2475 0    50   Input ~ 0
 USART1_TX
-Text GLabel 7650 2375 0    50   Input ~ 0
+Text GLabel 7650 2675 0    50   Input ~ 0
 BUTTON
 Text GLabel 7700 2275 0    50   Input ~ 0
 M2_BACK
@@ -514,17 +514,17 @@ F 3 "" H 8075 4175 50  0001 C CNN
 	1    8075 4175
 	1    0    0    -1  
 $EndComp
-Text GLabel 9725 2075 2    50   Input ~ 0
+Text GLabel 9750 2175 2    50   Input ~ 0
 EMIT_4
-Text GLabel 9625 2175 2    50   Input ~ 0
+Text GLabel 7725 2775 0    50   Input ~ 0
 LED_BLUE
 Text GLabel 9650 2275 2    50   Input ~ 0
 RECEIV_4
 Text GLabel 9650 2375 2    50   Input ~ 0
 RECEIV_3
-Text GLabel 9600 2475 2    50   Input ~ 0
+Text GLabel 7725 3275 0    50   Input ~ 0
 M2_ENC_B
-Text GLabel 9600 2575 2    50   Input ~ 0
+Text GLabel 7725 3375 0    50   Input ~ 0
 M2_ENC_A
 Text GLabel 9625 2675 2    50   Input ~ 0
 RECEIV_2
@@ -538,19 +538,19 @@ Text GLabel 9650 3075 2    50   Input ~ 0
 V_METER
 Text GLabel 9675 3175 2    50   Input ~ 0
 BUZZER
-Text GLabel 7625 2875 0    50   Input ~ 0
+Text GLabel 7600 3175 0    50   Input ~ 0
 EMIT_3
 Text GLabel 7775 3075 0    50   Input ~ 0
 LED_GREEN
-Text GLabel 7675 3175 0    50   Input ~ 0
+Text GLabel 7700 2875 0    50   Input ~ 0
 LED_RED
-Text GLabel 7725 3275 0    50   Input ~ 0
+Text GLabel 9600 2575 2    50   Input ~ 0
 M1_ENC_B
-Text GLabel 7725 3375 0    50   Input ~ 0
+Text GLabel 9600 2475 2    50   Input ~ 0
 M1_ENC_A
-Text GLabel 7650 3475 0    50   Input ~ 0
-M1_SPD
 Text GLabel 7650 3575 0    50   Input ~ 0
+M1_SPD
+Text GLabel 7650 3475 0    50   Input ~ 0
 M2_SPD
 Text GLabel 9850 1975 2    50   Input ~ 0
 RST
@@ -565,21 +565,11 @@ Wire Wire Line
 Wire Wire Line
 	7825 2275 7700 2275
 Wire Wire Line
-	7825 2375 7650 2375
-Wire Wire Line
 	7825 2475 7775 2475
 Wire Wire Line
 	7825 2575 7775 2575
 Wire Wire Line
-	7825 2675 7625 2675
-Wire Wire Line
-	7825 2775 7625 2775
-Wire Wire Line
-	7825 2875 7625 2875
-Wire Wire Line
 	7825 3075 7775 3075
-Wire Wire Line
-	7825 3175 7675 3175
 Wire Wire Line
 	7825 3275 7725 3275
 Wire Wire Line
@@ -594,8 +584,6 @@ NoConn ~ 9425 3375
 NoConn ~ 9425 3475
 Wire Wire Line
 	9425 2075 9725 2075
-Wire Wire Line
-	9425 2175 9625 2175
 Wire Wire Line
 	9425 2475 9600 2475
 Wire Wire Line
@@ -1294,9 +1282,9 @@ F 3 "~" H 12000 4200 50  0001 C CNN
 	1    12000 4200
 	1    0    0    -1  
 $EndComp
-Text GLabel 11800 4100 0    50   Input ~ 0
-M2_ENC_A
 Text GLabel 11800 4200 0    50   Input ~ 0
+M2_ENC_A
+Text GLabel 11800 4100 0    50   Input ~ 0
 M2_ENC_B
 Text GLabel 11800 4500 0    50   Input ~ 0
 M2_OUT_1
@@ -2090,12 +2078,8 @@ Wire Wire Line
 Wire Wire Line
 	8725 1550 8725 1675
 Connection ~ 8725 1550
-Text GLabel 8975 5575 2    50   Input ~ 0
-3V3_MCU
 Wire Wire Line
 	8525 5575 8975 5575
-Text GLabel 8200 6525 2    50   Input ~ 0
-3V3_MCU
 $Comp
 L Regulator_Linear:APE8865Y5-33-HF-3 U4
 U 1 1 63591EE0
@@ -2667,4 +2651,40 @@ F 3 "" H 9000 1350 50  0001 C CNN
 	1    9000 1350
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR0149
+U 1 1 635D6435
+P 8975 5500
+F 0 "#PWR0149" H 8975 5350 50  0001 C CNN
+F 1 "+3V3" H 8990 5673 50  0000 C CNN
+F 2 "" H 8975 5500 50  0001 C CNN
+F 3 "" H 8975 5500 50  0001 C CNN
+	1    8975 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0150
+U 1 1 635D6DA4
+P 8200 6525
+F 0 "#PWR0150" H 8200 6375 50  0001 C CNN
+F 1 "+3V3" H 8215 6698 50  0000 C CNN
+F 2 "" H 8200 6525 50  0001 C CNN
+F 3 "" H 8200 6525 50  0001 C CNN
+	1    8200 6525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8975 5575 8975 5500
+Wire Wire Line
+	7825 2875 7700 2875
+Wire Wire Line
+	7600 3175 7825 3175
+Wire Wire Line
+	7625 2375 7825 2375
+Wire Wire Line
+	9425 2175 9750 2175
+Wire Wire Line
+	7825 2775 7725 2775
+Wire Wire Line
+	7825 2675 7650 2675
 $EndSCHEMATC

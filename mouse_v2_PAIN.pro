@@ -1,4 +1,4 @@
-update=Thursday, October 20, 2022 at 06:03:34 PM
+update=Monday, October 24, 2022 at 02:42:14 PM
 version=1
 last_client=pcbnew
 [general]
@@ -35,8 +35,9 @@ TrackWidth4=0.5
 TrackWidth5=0.75
 TrackWidth6=1
 TrackWidth7=1.25
-TrackWidth8=2
-TrackWidth9=3
+TrackWidth8=1.5
+TrackWidth9=2
+TrackWidth10=3
 ViaDiameter1=0.8
 ViaDrill1=0.4
 ViaDiameter2=1.6
