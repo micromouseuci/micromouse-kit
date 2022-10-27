@@ -469,7 +469,7 @@ F 3 "" H 14975 1575 50  0001 C CNN
 	1    14975 1575
 	1    0    0    -1  
 $EndComp
-Text GLabel 7625 2375 0    50   Input ~ 0
+Text GLabel 7575 1975 0    50   Input ~ 0
 EMIT_1
 Text GLabel 9725 2075 2    50   Input ~ 0
 EMIT_2
@@ -479,13 +479,13 @@ Text GLabel 7775 2475 0    50   Input ~ 0
 USART1_TX
 Text GLabel 7650 2675 0    50   Input ~ 0
 BUTTON
-Text GLabel 7700 2275 0    50   Input ~ 0
+Text GLabel 7675 2275 0    50   Input ~ 0
 M2_BACK
-Text GLabel 7650 2175 0    50   Input ~ 0
+Text GLabel 7625 2075 0    50   Input ~ 0
 M2_FWD
-Text GLabel 7700 2075 0    50   Input ~ 0
+Text GLabel 7675 2175 0    50   Input ~ 0
 M1_BACK
-Text GLabel 7650 1975 0    50   Input ~ 0
+Text GLabel 7625 2375 0    50   Input ~ 0
 M1_FWD
 Wire Wire Line
 	8625 3875 8625 3975
@@ -526,9 +526,9 @@ Text GLabel 7725 3275 0    50   Input ~ 0
 M2_ENC_B
 Text GLabel 7725 3375 0    50   Input ~ 0
 M2_ENC_A
-Text GLabel 9625 2675 2    50   Input ~ 0
-RECEIV_2
 Text GLabel 9625 2775 2    50   Input ~ 0
+RECEIV_2
+Text GLabel 9625 2675 2    50   Input ~ 0
 RECEIV_1
 Text GLabel 9575 2875 2    50   Input ~ 0
 USART2_RX
@@ -556,14 +556,6 @@ Text GLabel 9850 1975 2    50   Input ~ 0
 RST
 Text GLabel 7525 2975 0    50   Input ~ 0
 SWO
-Wire Wire Line
-	7825 1975 7650 1975
-Wire Wire Line
-	7825 2075 7700 2075
-Wire Wire Line
-	7825 2175 7650 2175
-Wire Wire Line
-	7825 2275 7700 2275
 Wire Wire Line
 	7825 2475 7775 2475
 Wire Wire Line
@@ -909,8 +901,6 @@ Wire Wire Line
 	3175 7200 2700 7200
 Wire Wire Line
 	5020 4345 5100 4345
-Wire Wire Line
-	5100 4345 5100 4405
 Connection ~ 5020 4345
 $Comp
 L power:+5V #PWR0109
@@ -2577,7 +2567,7 @@ F 3 "~" H 5775 7575 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6100 7575 5975 7575
-Text GLabel 5100 4400 3    50   Input ~ 0
+Text GLabel 5100 4425 3    50   Input ~ 0
 AGND
 Wire Wire Line
 	11800 4300 11275 4300
@@ -2680,11 +2670,81 @@ Wire Wire Line
 Wire Wire Line
 	7600 3175 7825 3175
 Wire Wire Line
-	7625 2375 7825 2375
-Wire Wire Line
 	9425 2175 9750 2175
 Wire Wire Line
 	7825 2775 7725 2775
 Wire Wire Line
 	7825 2675 7650 2675
+Wire Wire Line
+	7575 1975 7825 1975
+Wire Wire Line
+	7825 2075 7625 2075
+Wire Wire Line
+	7675 2175 7825 2175
+Wire Wire Line
+	7825 2275 7675 2275
+Wire Wire Line
+	7625 2375 7825 2375
+$Comp
+L Connector:Conn_01x02_Female J6
+U 1 1 635B9403
+P 1075 3850
+F 0 "J6" H 1103 3826 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1103 3735 50  0000 L CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" H 1075 3850 50  0001 C CNN
+F 3 "~" H 1075 3850 50  0001 C CNN
+	1    1075 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J7
+U 1 1 635BB2ED
+P 1075 4050
+F 0 "J7" H 1103 4026 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1103 3935 50  0000 L CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" H 1075 4050 50  0001 C CNN
+F 3 "~" H 1075 4050 50  0001 C CNN
+	1    1075 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J8
+U 1 1 635BB64C
+P 1075 4275
+F 0 "J8" H 1103 4251 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1103 4160 50  0000 L CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" H 1075 4275 50  0001 C CNN
+F 3 "~" H 1075 4275 50  0001 C CNN
+	1    1075 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J9
+U 1 1 635BBA41
+P 1075 4500
+F 0 "J9" H 1103 4476 50  0000 L CNN
+F 1 "Conn_01x02_Female" H 1103 4385 50  0000 L CNN
+F 2 "Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical" H 1075 4500 50  0001 C CNN
+F 3 "~" H 1075 4500 50  0001 C CNN
+	1    1075 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 875  3850 0    50   Input ~ 0
+RECEIV_1
+Text GLabel 875  4050 0    50   Input ~ 0
+RECEIV_2
+Text GLabel 875  4275 0    50   Input ~ 0
+RECEIV_3
+Text GLabel 875  4500 0    50   Input ~ 0
+RECEIV_4
+Text GLabel 875  3950 0    50   Input ~ 0
+AGND
+Text GLabel 875  4150 0    50   Input ~ 0
+AGND
+Text GLabel 875  4375 0    50   Input ~ 0
+AGND
+Text GLabel 875  4600 0    50   Input ~ 0
+AGND
+Wire Wire Line
+	5100 4345 5100 4425
 $EndSCHEMATC
