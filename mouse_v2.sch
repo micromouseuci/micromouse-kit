@@ -13,8 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Wire Wire Line
-	5020 3045 4120 3045
 $Comp
 L mouse_v2-rescue:Q_Photo_NPN-Device Q0
 U 1 1 5D1CEBFF
@@ -477,8 +475,6 @@ Text GLabel 7775 2575 0    50   Input ~ 0
 USART1_RX
 Text GLabel 7775 2475 0    50   Input ~ 0
 USART1_TX
-Text GLabel 7625 3075 0    50   Input ~ 0
-BUTTON
 Text GLabel 7675 2275 0    50   Input ~ 0
 M2_BACK
 Text GLabel 7625 2075 0    50   Input ~ 0
@@ -488,15 +484,9 @@ M1_BACK
 Text GLabel 7625 2375 0    50   Input ~ 0
 M1_FWD
 Wire Wire Line
-	8625 3875 8625 3975
-Wire Wire Line
 	8625 3975 8525 3975
 Wire Wire Line
-	8525 3975 8525 3875
-Wire Wire Line
 	8525 3975 8425 3975
-Wire Wire Line
-	8425 3975 8425 3875
 Connection ~ 8525 3975
 Wire Wire Line
 	8075 3975 8075 4175
@@ -540,14 +530,6 @@ Text GLabel 9675 3175 2    50   Input ~ 0
 BUZZER
 Text GLabel 7600 3175 0    50   Input ~ 0
 EMIT_3
-Text GLabel 7750 2875 0    50   Input ~ 0
-LED_GREEN
-Text GLabel 7650 2675 0    50   Input ~ 0
-LED_RED
-Text GLabel 9600 2475 2    50   Input ~ 0
-M1_ENC_B
-Text GLabel 9600 2575 2    50   Input ~ 0
-M1_ENC_A
 Text GLabel 7650 3575 0    50   Input ~ 0
 M1_SPD
 Text GLabel 7650 3475 0    50   Input ~ 0
@@ -839,10 +821,7 @@ Wire Wire Line
 Wire Wire Line
 	3220 3595 3220 3710
 Wire Wire Line
-	5020 3045 5135 3045
-Wire Wire Line
 	5135 3045 5135 2980
-Connection ~ 5020 3045
 Wire Wire Line
 	2370 3595 2370 3735
 Wire Wire Line
@@ -881,17 +860,6 @@ F 3 "~" H 3175 6975 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3650 7200 3175 7200
-$Comp
-L Device:C C2
-U 1 1 6362DC24
-P 2700 6975
-F 0 "C2" H 2815 7021 50  0000 L CNN
-F 1 "100uF" H 2815 6930 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2738 6825 50  0001 C CNN
-F 3 "~" H 2700 6975 50  0001 C CNN
-	1    2700 6975
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	3175 7200 3175 7125
 Connection ~ 3175 7200
@@ -2509,40 +2477,8 @@ Wire Wire Line
 Connection ~ 4575 5375
 Wire Wire Line
 	4575 5375 4775 5375
-Text GLabel 13300 3375 3    50   Input ~ 0
-MGND
 Wire Wire Line
 	13300 3100 13300 3375
-Text GLabel 14300 3300 0    50   Input ~ 0
-MGND
-$Comp
-L power:GND #PWR0107
-U 1 1 6387BAF7
-P 15000 3425
-F 0 "#PWR0107" H 15000 3175 50  0001 C CNN
-F 1 "GND" H 15005 3252 50  0000 C CNN
-F 2 "" H 15000 3425 50  0001 C CNN
-F 3 "" H 15000 3425 50  0001 C CNN
-	1    15000 3425
-	1    0    0    -1  
-$EndComp
-$Comp
-L Jumper:Jumper_2_Open JP5
-U 1 1 6387D303
-P 14700 3300
-F 0 "JP5" H 14700 3535 50  0000 C CNN
-F 1 "Jumper_2_Open" H 14700 3444 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 14700 3300 50  0001 C CNN
-F 3 "~" H 14700 3300 50  0001 C CNN
-	1    14700 3300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	15000 3425 15000 3300
-Wire Wire Line
-	15000 3300 14900 3300
-Wire Wire Line
-	14500 3300 14300 3300
 Wire Wire Line
 	5300 7200 5300 7575
 Wire Wire Line
@@ -2740,11 +2676,126 @@ AGND
 Text GLabel 875  4600 0    50   Input ~ 0
 AGND
 Wire Wire Line
-	5100 4345 5100 4425
-Wire Wire Line
-	7625 3075 7825 3075
-Wire Wire Line
-	7750 2875 7825 2875
+	5100 4345 5100 4350
 Wire Wire Line
 	7825 2675 7650 2675
+Text GLabel 9600 2475 2    50   Input ~ 0
+M1_ENC_B
+Text GLabel 9600 2575 2    50   Input ~ 0
+M1_ENC_A
+Text GLabel 7625 3075 0    50   Input ~ 0
+BUTTON
+Wire Wire Line
+	7625 3075 7825 3075
+Text GLabel 7650 2675 0    50   Input ~ 0
+LED_RED
+Text GLabel 7750 2875 0    50   Input ~ 0
+LED_GREEN
+Wire Wire Line
+	7750 2875 7825 2875
+$Comp
+L Device:C C2
+U 1 1 6362DC24
+P 2700 6975
+F 0 "C2" H 2450 6975 50  0000 L CNN
+F 1 "100uF" H 2400 6875 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 2738 6825 50  0001 C CNN
+F 3 "~" H 2700 6975 50  0001 C CNN
+	1    2700 6975
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 63609F53
+P 5450 3700
+F 0 "C14" H 5565 3746 50  0000 L CNN
+F 1 "1uF" H 5565 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5488 3550 50  0001 C CNN
+F 3 "~" H 5450 3700 50  0001 C CNN
+	1    5450 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 6360A313
+P 5775 3700
+F 0 "C15" H 5890 3746 50  0000 L CNN
+F 1 "1uF" H 5890 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5813 3550 50  0001 C CNN
+F 3 "~" H 5775 3700 50  0001 C CNN
+	1    5775 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C20
+U 1 1 6360AA87
+P 6100 3700
+F 0 "C20" H 6215 3746 50  0000 L CNN
+F 1 "1uF" H 6215 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6138 3550 50  0001 C CNN
+F 3 "~" H 6100 3700 50  0001 C CNN
+	1    6100 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 6360AE4E
+P 6400 3700
+F 0 "C21" H 6515 3746 50  0000 L CNN
+F 1 "1uF" H 6515 3655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 6438 3550 50  0001 C CNN
+F 3 "~" H 6400 3700 50  0001 C CNN
+	1    6400 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3550 5775 3550
+Connection ~ 5775 3550
+Wire Wire Line
+	5775 3550 5925 3550
+Connection ~ 6100 3550
+Wire Wire Line
+	6100 3550 6400 3550
+Wire Wire Line
+	6400 3850 6100 3850
+Connection ~ 5775 3850
+Wire Wire Line
+	5775 3850 5450 3850
+Connection ~ 6100 3850
+Wire Wire Line
+	6100 3850 5925 3850
+Wire Wire Line
+	5925 3850 5925 4350
+Wire Wire Line
+	5925 4350 5100 4350
+Connection ~ 5925 3850
+Wire Wire Line
+	5925 3850 5775 3850
+Connection ~ 5100 4350
+Wire Wire Line
+	5100 4350 5100 4425
+Connection ~ 5925 3550
+Wire Wire Line
+	5925 3550 6100 3550
+Wire Wire Line
+	5925 3045 5925 3550
+Wire Wire Line
+	4120 3045 5020 3045
+Connection ~ 5020 3045
+Wire Wire Line
+	5020 3045 5135 3045
+Connection ~ 5135 3045
+Wire Wire Line
+	5135 3045 5925 3045
+$Comp
+L power:GND #PWR?
+U 1 1 63794FA2
+P 13300 3375
+F 0 "#PWR?" H 13300 3125 50  0001 C CNN
+F 1 "GND" H 13305 3202 50  0000 C CNN
+F 2 "" H 13300 3375 50  0001 C CNN
+F 3 "" H 13300 3375 50  0001 C CNN
+	1    13300 3375
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
