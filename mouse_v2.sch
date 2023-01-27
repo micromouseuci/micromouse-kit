@@ -2058,7 +2058,6 @@ F 3 "" H 1650 5225 50  0001 C CNN
 	1    1650 5225
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3275 5475
 Wire Wire Line
 	2225 5375 2225 5475
 Wire Wire Line
@@ -2066,8 +2065,6 @@ Wire Wire Line
 Connection ~ 2225 5375
 Wire Wire Line
 	2225 5375 1950 5375
-Wire Wire Line
-	3275 5375 3400 5375
 Wire Wire Line
 	3725 5375 3725 5200
 $Comp
@@ -2172,9 +2169,6 @@ F 3 "~" H 3400 5600 50  0001 C CNN
 	1    3400 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3400 5450 3400 5375
-Connection ~ 3400 5375
 Wire Wire Line
 	3400 5375 3725 5375
 Wire Wire Line
@@ -2915,4 +2909,55 @@ Wire Wire Line
 	1000 1775 1000 2000
 Wire Wire Line
 	1000 1775 1475 1775
+Wire Wire Line
+	3275 5475 3400 5475
+Wire Wire Line
+	3400 5375 3400 5450
+Connection ~ 3400 5450
+Wire Wire Line
+	3400 5450 3400 5475
+Text Notes 2975 5775 0    50   ~ 0
+On my reg VOUT and BYP swapped
+Wire Wire Line
+	3275 5375 3350 5375
+Wire Wire Line
+	3350 5375 3350 5275
+Wire Wire Line
+	3350 5275 3425 5275
+Text GLabel 3400 5050 0    50   Input ~ 0
+3V3_BYP
+Wire Wire Line
+	3425 5050 3400 5050
+Wire Wire Line
+	3425 5050 3425 5275
+Text GLabel 5675 5600 0    50   Input ~ 0
+3V3_BYP
+$Comp
+L Device:C C25
+U 1 1 63803AB5
+P 5800 5800
+F 0 "C25" H 5915 5846 50  0000 L CNN
+F 1 "10nF" H 5915 5755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5838 5650 50  0001 C CNN
+F 3 "~" H 5800 5800 50  0001 C CNN
+	1    5800 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 5650 5800 5600
+Wire Wire Line
+	5800 5600 5675 5600
+$Comp
+L power:GND #PWR0151
+U 1 1 63861CB5
+P 5800 6050
+F 0 "#PWR0151" H 5800 5800 50  0001 C CNN
+F 1 "GND" H 5805 5877 50  0000 C CNN
+F 2 "" H 5800 6050 50  0001 C CNN
+F 3 "" H 5800 6050 50  0001 C CNN
+	1    5800 6050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 5950 5800 6050
 $EndSCHEMATC

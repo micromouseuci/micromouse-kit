@@ -2058,7 +2058,6 @@ F 3 "" H 1650 5225 50  0001 C CNN
 	1    1650 5225
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3275 5475
 Wire Wire Line
 	2225 5375 2225 5475
 Wire Wire Line
@@ -2066,8 +2065,6 @@ Wire Wire Line
 Connection ~ 2225 5375
 Wire Wire Line
 	2225 5375 1950 5375
-Wire Wire Line
-	3275 5375 3400 5375
 Wire Wire Line
 	3725 5375 3725 5200
 $Comp
@@ -2172,9 +2169,6 @@ F 3 "~" H 3400 5600 50  0001 C CNN
 	1    3400 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3400 5450 3400 5375
-Connection ~ 3400 5375
 Wire Wire Line
 	3400 5375 3725 5375
 Wire Wire Line
@@ -2851,10 +2845,6 @@ Connection ~ 1300 1725
 Wire Wire Line
 	1300 1725 1300 1800
 Wire Wire Line
-	1475 1775 1000 1775
-Wire Wire Line
-	1000 1775 1000 1975
-Wire Wire Line
 	1775 1975 1775 2400
 Wire Wire Line
 	1775 2400 1300 2400
@@ -2915,4 +2905,16 @@ Wire Wire Line
 Connection ~ 5800 1775
 Wire Wire Line
 	5800 1775 5800 1800
+Wire Wire Line
+	1000 1775 1000 2000
+Wire Wire Line
+	1000 1775 1475 1775
+Wire Wire Line
+	3275 5475 3400 5475
+Wire Wire Line
+	3400 5375 3400 5450
+Connection ~ 3400 5450
+Wire Wire Line
+	3400 5450 3400 5475
+NoConn ~ 3275 5375
 $EndSCHEMATC
