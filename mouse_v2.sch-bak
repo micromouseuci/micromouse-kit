@@ -335,7 +335,7 @@ L Connector:Conn_01x06_Female J1
 U 1 1 60599606
 P 11525 7325
 F 0 "J1" H 11417 6800 50  0000 C CNN
-F 1 "HC05 Header" H 11417 6891 50  0000 C CNN
+F 1 "Serial Debug Header" H 11417 6891 50  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 11525 7325 50  0001 C CNN
 F 3 "~" H 11525 7325 50  0001 C CNN
 	1    11525 7325
@@ -429,23 +429,6 @@ F 3 "~" H 9225 10175 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 608D00EC
-P 11500 7925
-F 0 "J3" H 11675 8150 50  0000 C CNN
-F 1 "HC05_Key Jump" H 11675 8050 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 11500 7925 50  0001 C CNN
-F 3 "~" H 11500 7925 50  0001 C CNN
-	1    11500 7925
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11725 7025 12125 7025
-Wire Wire Line
-	11700 8025 12150 8025
-Wire Wire Line
-	11700 7925 12150 7925
-$Comp
 L Device:C C4
 U 1 1 63246B19
 P 14975 1350
@@ -484,15 +467,7 @@ M1_BACK
 Text GLabel 7625 2375 0    50   Input ~ 0
 M1_FWD
 Wire Wire Line
-	8625 3975 8525 3975
-Wire Wire Line
-	8525 3975 8425 3975
-Connection ~ 8525 3975
-Wire Wire Line
 	8075 3975 8075 4175
-Connection ~ 8425 3975
-Wire Wire Line
-	8425 3975 8075 3975
 $Comp
 L power:GND #PWR0102
 U 1 1 63280041
@@ -521,19 +496,15 @@ RECEIV_2
 Text GLabel 9625 2675 2    50   Input ~ 0
 RECEIV_1
 Text GLabel 9575 2875 2    50   Input ~ 0
-USART2_RX
+M1_SPD
 Text GLabel 9575 2975 2    50   Input ~ 0
-USART2_TX
+M2_SPD
 Text GLabel 9650 3075 2    50   Input ~ 0
 V_METER
 Text GLabel 9675 3175 2    50   Input ~ 0
 BUZZER
 Text GLabel 7600 3175 0    50   Input ~ 0
 EMIT_3
-Text GLabel 7650 3575 0    50   Input ~ 0
-M1_SPD
-Text GLabel 7650 3475 0    50   Input ~ 0
-M2_SPD
 Text GLabel 9850 1975 2    50   Input ~ 0
 RST
 Text GLabel 7525 2975 0    50   Input ~ 0
@@ -1025,82 +996,10 @@ Wire Wire Line
 	2025 7175 2025 7225
 Text GLabel 1875 7175 0    50   Input ~ 0
 V_METER
-$Comp
-L Connector:Conn_01x06_Female J2
-U 1 1 63A1A5EA
-P 11500 8925
-F 0 "J2" H 11392 8400 50  0000 C CNN
-F 1 "Serial Debug Header" H 11392 8491 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 11500 8925 50  0001 C CNN
-F 3 "~" H 11500 8925 50  0001 C CNN
-	1    11500 8925
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	11700 9125 11975 9125
-Wire Wire Line
-	11975 9125 11975 9250
-$Comp
-L power:GND #PWR0116
-U 1 1 63B28574
-P 11975 9250
-F 0 "#PWR0116" H 11975 9000 50  0001 C CNN
-F 1 "GND" H 11980 9077 50  0000 C CNN
-F 2 "" H 11975 9250 50  0001 C CNN
-F 3 "" H 11975 9250 50  0001 C CNN
-	1    11975 9250
-	1    0    0    -1  
-$EndComp
-NoConn ~ 11700 9025
-NoConn ~ 11700 8925
-NoConn ~ 11700 8625
-Text GLabel 12150 7925 2    50   Input ~ 0
-HC05_Key
-Wire Wire Line
-	12150 8025 12150 8100
-$Comp
-L power:GND #PWR0117
-U 1 1 63B898B6
-P 12150 8100
-F 0 "#PWR0117" H 12150 7850 50  0001 C CNN
-F 1 "GND" H 12155 7927 50  0000 C CNN
-F 2 "" H 12150 8100 50  0001 C CNN
-F 3 "" H 12150 8100 50  0001 C CNN
-	1    12150 8100
-	1    0    0    -1  
-$EndComp
-Text GLabel 12125 7025 2    50   Input ~ 0
-HC05_Key
-Wire Wire Line
-	11725 7125 12700 7125
-$Comp
-L power:+5V #PWR0118
-U 1 1 63BC1A6A
-P 12700 6775
-F 0 "#PWR0118" H 12700 6625 50  0001 C CNN
-F 1 "+5V" H 12715 6948 50  0000 C CNN
-F 2 "" H 12700 6775 50  0001 C CNN
-F 3 "" H 12700 6775 50  0001 C CNN
-	1    12700 6775
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0119
-U 1 1 63BC2B7D
-P 13050 8075
-F 0 "#PWR0119" H 13050 7825 50  0001 C CNN
-F 1 "GND" H 13055 7902 50  0000 C CNN
-F 2 "" H 13050 8075 50  0001 C CNN
-F 3 "" H 13050 8075 50  0001 C CNN
-	1    13050 8075
-	1    0    0    -1  
-$EndComp
 Text GLabel 15075 7425 2    50   Input ~ 0
 USART1_TX
 Text GLabel 15075 7325 2    50   Input ~ 0
 USART1_RX
-Wire Wire Line
-	12700 6775 12700 7125
 Text GLabel 12750 1975 0    50   Input ~ 0
 M1_SPD
 Text GLabel 12750 2575 0    50   Input ~ 0
@@ -1321,18 +1220,6 @@ Wire Wire Line
 Connection ~ 1375 9150
 Text Notes 2125 8900 2    39   ~ 0
 * 2 footprint options
-$Comp
-L YAAJ_BluePill_SWD_Breakout:YAAJ_BluePill_SWD_Breakout U1
-U 1 1 64014084
-P 8625 2775
-F 0 "U1" H 8625 1125 50  0000 C CNN
-F 1 "YAAJ_BluePill_SWD_Breakout" H 8625 1025 50  0000 C CNN
-F 2 "bluepill:YAAJ_BluePill_SWD_2" V 8550 3725 50  0001 C CNN
-F 3 "" V 8550 3725 50  0001 C CNN
-	1    8625 2775
-	1    0    0    -1  
-$EndComp
-Connection ~ 8625 3975
 Text GLabel 9725 3575 2    50   Input ~ 0
 SWDIO
 Text GLabel 9675 3675 2    50   Input ~ 0
@@ -1341,8 +1228,6 @@ Wire Wire Line
 	9675 3675 9425 3675
 Wire Wire Line
 	9425 3575 9725 3575
-Wire Wire Line
-	8725 3975 8625 3975
 $Comp
 L Connector:Conn_ARM_JTAG_SWD_10 J4
 U 1 1 64073ABA
@@ -1574,120 +1459,8 @@ Wire Wire Line
 	13850 7850 13850 8075
 Wire Wire Line
 	13450 8075 13450 7850
-Text GLabel 15050 8825 2    50   Input ~ 0
-USART2_RX
-Text GLabel 15050 8725 2    50   Input ~ 0
-USART2_TX
-$Comp
-L Device:FerriteBead_Small FB1
-U 1 1 6367FD58
-P 14650 8575
-F 0 "FB1" V 14413 8575 50  0000 C CNN
-F 1 "HZ0603C601R-10" V 14504 8575 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 14580 8575 50  0001 C CNN
-F 3 "~" H 14650 8575 50  0001 C CNN
-	1    14650 8575
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:FerriteBead_Small FB2
-U 1 1 6367FD62
-P 14650 8975
-F 0 "FB2" V 14400 8975 50  0000 C CNN
-F 1 "HZ0603C601R-10" V 14500 8975 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 14580 8975 50  0001 C CNN
-F 3 "~" H 14650 8975 50  0001 C CNN
-	1    14650 8975
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	14875 8975 14875 8825
-Wire Wire Line
-	14875 8575 14875 8725
-Wire Wire Line
-	14875 8825 15050 8825
-$Comp
-L Device:C_Small C5
-U 1 1 6367FD70
-P 13425 9150
-F 0 "C5" H 13517 9196 50  0000 L CNN
-F 1 "22pF" H 13517 9105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 13425 9150 50  0001 C CNN
-F 3 "~" H 13425 9150 50  0001 C CNN
-	1    13425 9150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C7
-U 1 1 6367FD7A
-P 13825 9150
-F 0 "C7" H 13917 9196 50  0000 L CNN
-F 1 "22pF" H 13917 9105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 13825 9150 50  0001 C CNN
-F 3 "~" H 13825 9150 50  0001 C CNN
-	1    13825 9150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	14400 8975 14400 8825
-Wire Wire Line
-	14400 8575 14400 8725
-Wire Wire Line
-	14875 8975 14750 8975
-Wire Wire Line
-	14400 8975 14550 8975
-Wire Wire Line
-	14875 8575 14750 8575
-Wire Wire Line
-	14400 8575 14550 8575
-Wire Wire Line
-	13825 9050 13825 8725
-Connection ~ 13825 8725
-Wire Wire Line
-	13825 8725 14400 8725
-Wire Wire Line
-	13425 9050 13425 8825
-Connection ~ 13425 8825
-Wire Wire Line
-	13425 8825 14400 8825
-$Comp
-L power:GND #PWR0133
-U 1 1 6367FD92
-P 13825 9475
-F 0 "#PWR0133" H 13825 9225 50  0001 C CNN
-F 1 "GND" H 13830 9302 50  0000 C CNN
-F 2 "" H 13825 9475 50  0001 C CNN
-F 3 "" H 13825 9475 50  0001 C CNN
-	1    13825 9475
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0134
-U 1 1 6367FD9C
-P 13425 9475
-F 0 "#PWR0134" H 13425 9225 50  0001 C CNN
-F 1 "GND" H 13430 9302 50  0000 C CNN
-F 2 "" H 13425 9475 50  0001 C CNN
-F 3 "" H 13425 9475 50  0001 C CNN
-	1    13425 9475
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13825 9250 13825 9475
-Wire Wire Line
-	13425 9475 13425 9250
-Wire Wire Line
-	11700 8725 13825 8725
-Wire Wire Line
-	11700 8825 13425 8825
-Wire Wire Line
-	14875 8725 15050 8725
 Wire Wire Line
 	14900 7325 15075 7325
-Wire Wire Line
-	13050 8075 13050 7225
-Wire Wire Line
-	11725 7225 13050 7225
 $Comp
 L Device:Q_NMOS_SGD Q4
 U 1 1 637E57DA
@@ -2169,8 +1942,6 @@ F 3 "~" H 3400 5600 50  0001 C CNN
 	1    3400 5600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3400 5375 3725 5375
 Wire Wire Line
 	3400 5750 3400 5875
 Connection ~ 3400 5875
@@ -2909,12 +2680,79 @@ Wire Wire Line
 	1000 1775 1000 2000
 Wire Wire Line
 	1000 1775 1475 1775
+Text Notes 2975 5775 0    50   ~ 0
+On my reg VOUT and BYP swapped
+Text GLabel 3825 5475 2    50   Input ~ 0
+3V3_BYP
+Text GLabel 5675 5600 0    50   Input ~ 0
+3V3_BYP
+$Comp
+L Device:C C25
+U 1 1 63803AB5
+P 5800 5800
+F 0 "C25" H 5915 5846 50  0000 L CNN
+F 1 "10nF" H 5915 5755 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 5838 5650 50  0001 C CNN
+F 3 "~" H 5800 5800 50  0001 C CNN
+	1    5800 5800
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3275 5475 3400 5475
+	5800 5650 5800 5600
 Wire Wire Line
-	3400 5375 3400 5450
-Connection ~ 3400 5450
+	5800 5600 5675 5600
+$Comp
+L power:GND #PWR0151
+U 1 1 63861CB5
+P 5800 6050
+F 0 "#PWR0151" H 5800 5800 50  0001 C CNN
+F 1 "GND" H 5805 5877 50  0000 C CNN
+F 2 "" H 5800 6050 50  0001 C CNN
+F 3 "" H 5800 6050 50  0001 C CNN
+	1    5800 6050
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	3400 5450 3400 5475
-NoConn ~ 3275 5375
+	5800 5950 5800 6050
+Wire Wire Line
+	11725 7025 13250 7025
+Wire Wire Line
+	13250 7025 13250 7100
+$Comp
+L power:GND #PWR0116
+U 1 1 640460FE
+P 13250 7100
+F 0 "#PWR0116" H 13250 6850 50  0001 C CNN
+F 1 "GND" H 13255 6927 50  0000 C CNN
+F 2 "" H 13250 7100 50  0001 C CNN
+F 3 "" H 13250 7100 50  0001 C CNN
+	1    13250 7100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11725 7125
+NoConn ~ 11725 7225
+Wire Wire Line
+	3275 5375 3400 5375
+Wire Wire Line
+	3400 5450 3400 5375
+Connection ~ 3400 5375
+Wire Wire Line
+	3400 5375 3725 5375
+Wire Wire Line
+	3275 5475 3825 5475
+Wire Wire Line
+	8075 3975 8425 3975
+Wire Wire Line
+	8625 3975 8725 3975
+$Comp
+L YAAJ_BluePill_SWD_Breakout:YAAJ_BluePill_SWD_Breakout U?
+U 1 1 64625826
+P 8625 2775
+F 0 "U?" H 8625 4056 50  0000 C CNN
+F 1 "YAAJ_BluePill_SWD_Breakout" H 8625 3965 50  0000 C CNN
+F 2 "" V 8550 3725 50  0001 C CNN
+F 3 "" V 8550 3725 50  0001 C CNN
+	1    8625 2775
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

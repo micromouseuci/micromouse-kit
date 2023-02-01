@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Users/jonathanlow/micromouse-kit/mouse_v2.sch)
-    (date "Wednesday, February 01, 2023 at 03:09:45 PM")
+    (date "Wednesday, February 01, 2023 at 03:09:58 PM")
     (tool "Eeschema (5.1.12-1-10_14)")
     (sheet (number 1) (name /) (tstamps /)
       (title_block

@@ -4,4 +4,5 @@
   (lib (name mouse_v2-rescue)(type Legacy)(uri ${KIPRJMOD}/mouse_v2-rescue.lib)(options "")(descr "")(disabled))
   (lib (name teensy)(type Legacy)(uri ${KIPRJMOD}/resources/Symbols/teensy_library/teensy.lib)(options "")(descr "")(disabled))
   (lib (name mouse-rescue)(type Legacy)(uri ${KIPRJMOD}/mouse-rescue.lib)(options "")(descr "")(disabled))
+  (lib (name custom-sym)(type Legacy)(uri ${KIPRJMOD}/custom-sym.lib)(options "")(descr ""))
 )
