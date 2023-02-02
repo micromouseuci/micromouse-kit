@@ -934,20 +934,18 @@ Wire Wire Line
 Connection ~ 4225 7200
 Wire Wire Line
 	3650 7200 3650 7575
-Wire Wire Line
-	3650 7575 3900 7575
 Connection ~ 3650 7575
 Wire Wire Line
 	3650 7575 3650 7650
 $Comp
 L Connector:TestPoint TP2
 U 1 1 6391FDE6
-P 3900 7575
-F 0 "TP2" H 3958 7693 50  0000 L CNN
-F 1 "GND_TP" H 3958 7602 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4100 7575 50  0001 C CNN
-F 3 "~" H 4100 7575 50  0001 C CNN
-	1    3900 7575
+P 3900 7500
+F 0 "TP2" H 3958 7618 50  0000 L CNN
+F 1 "GND_TP" H 3958 7527 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4100 7500 50  0001 C CNN
+F 3 "~" H 4100 7500 50  0001 C CNN
+	1    3900 7500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1420,9 +1418,9 @@ Wire Wire Line
 Wire Wire Line
 	14425 7175 14575 7175
 Wire Wire Line
-	11725 7425 13450 7425
+	11725 7425 12800 7425
 Wire Wire Line
-	11725 7325 13850 7325
+	11725 7325 12625 7325
 Wire Wire Line
 	13850 7650 13850 7325
 Connection ~ 13850 7325
@@ -2762,4 +2760,99 @@ Wire Wire Line
 	8525 3975 8425 3975
 Connection ~ 8525 3975
 Connection ~ 8425 3975
+$Comp
+L Connector:TestPoint TP5
+U 1 1 647F84BA
+P 4275 7500
+F 0 "TP5" H 4333 7618 50  0000 L CNN
+F 1 "GND_TP" H 4333 7527 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4475 7500 50  0001 C CNN
+F 3 "~" H 4475 7500 50  0001 C CNN
+	1    4275 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 647F98B3
+P 4700 7500
+F 0 "TP6" H 4758 7618 50  0000 L CNN
+F 1 "GND_TP" H 4758 7527 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical" H 4900 7500 50  0001 C CNN
+F 3 "~" H 4900 7500 50  0001 C CNN
+	1    4700 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 7575 4700 7500
+Wire Wire Line
+	3650 7575 3900 7575
+Wire Wire Line
+	4275 7500 4275 7575
+Connection ~ 4275 7575
+Wire Wire Line
+	4275 7575 4700 7575
+Wire Wire Line
+	3900 7500 3900 7575
+Connection ~ 3900 7575
+Wire Wire Line
+	3900 7575 4275 7575
+$Comp
+L Connector:Conn_01x06_Female J10
+U 1 1 64870CA0
+P 11475 8675
+F 0 "J10" H 11367 8150 50  0000 C CNN
+F 1 "Conn_01x06_Female" H 11367 8241 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical" H 11475 8675 50  0001 C CNN
+F 3 "~" H 11475 8675 50  0001 C CNN
+	1    11475 8675
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	11675 8775 12800 8775
+Wire Wire Line
+	12800 8775 12800 7425
+Connection ~ 12800 7425
+Wire Wire Line
+	12800 7425 13450 7425
+Wire Wire Line
+	11675 8675 12625 8675
+Wire Wire Line
+	12625 8675 12625 7325
+Connection ~ 12625 7325
+Wire Wire Line
+	12625 7325 13850 7325
+Wire Wire Line
+	11675 8475 12225 8475
+Wire Wire Line
+	12225 8475 12225 8150
+Wire Wire Line
+	11675 8575 12225 8575
+Wire Wire Line
+	12225 8575 12225 9000
+$Comp
+L power:GND #PWR0118
+U 1 1 64919533
+P 12225 9000
+F 0 "#PWR0118" H 12225 8750 50  0001 C CNN
+F 1 "GND" H 12230 8827 50  0000 C CNN
+F 2 "" H 12225 9000 50  0001 C CNN
+F 3 "" H 12225 9000 50  0001 C CNN
+	1    12225 9000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11675 8375
+NoConn ~ 11675 8875
+NoConn ~ 7650 3475
+NoConn ~ 7650 3575
+$Comp
+L power:+5V #PWR0117
+U 1 1 649E8DEB
+P 12225 8150
+F 0 "#PWR0117" H 12225 8000 50  0001 C CNN
+F 1 "+5V" H 12240 8323 50  0000 C CNN
+F 2 "" H 12225 8150 50  0001 C CNN
+F 3 "" H 12225 8150 50  0001 C CNN
+	1    12225 8150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
